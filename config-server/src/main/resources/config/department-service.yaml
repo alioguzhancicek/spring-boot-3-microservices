@@ -1,0 +1,20 @@
+server:
+  port: 8081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+spring:
+  datasource:
+    username: spring
+    url: jdbc:postgresql://localhost:5432/department-service
+    password: spring
+  jpa:
+    generate-ddl: 'true'
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: create

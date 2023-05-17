@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - 9411:9411
+  db:
+    image: postgres:13.1-alpine
+    container_name: pokemon-api-db
+    environment:
+      - POSTGRES_USER=spring
+      - POSTGRES_PASSWORD=spring
+      - POSTGRES_DB=department-service
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+    ports:
+      - '5432:5432'
