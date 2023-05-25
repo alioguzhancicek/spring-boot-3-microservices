@@ -33,4 +33,10 @@ public class DepartmentController {
         log.info("Department find: id={}", id);
         return departmentService.get(id);
     }
+
+    @GetMapping("/with-employees")
+    public List<Department> getAllWithEmployees() {
+        log.info("Department find with employees");
+        return departmentService.getAllWithEmployees();
+    }
 }

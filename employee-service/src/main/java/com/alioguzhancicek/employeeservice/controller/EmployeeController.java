@@ -33,4 +33,10 @@ public class EmployeeController {
         log.info("Employee find: id={}", id);
         return employeeService.get(id);
     }
+
+    @GetMapping("/department/{departmentId}")
+    public List<Employee> getByDepartment(@PathVariable("departmentId") Long departmentId) {
+        log.info("Employee find: departmentId={}", departmentId);
+        return employeeService.getByDepartment(departmentId).stream().toList();
+    }
 }

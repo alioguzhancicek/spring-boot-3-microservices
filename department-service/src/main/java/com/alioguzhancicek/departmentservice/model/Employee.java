@@ -1,8 +1,6 @@
-package com.alioguzhancicek.employeeservice.model;
+package com.alioguzhancicek.departmentservice.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -21,6 +19,7 @@ public class Employee extends BaseModel {
     private Integer age;
     @Column
     private String position;
-    @Column
-    private Long departmentId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "departmentId", referencedColumnName = "id")
+    private Department department;
 }
