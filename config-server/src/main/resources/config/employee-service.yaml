@@ -1,5 +1,6 @@
 server:
-  port: 8081
+  port: 8082
+
 eureka:
   client:
     serviceUrl:
@@ -12,9 +13,9 @@ management:
 
 spring:
   datasource:
-    username: department
-    url: jdbc:postgresql://localhost:5432/department
-    password: department
+    username: employee
+    url: jdbc:postgresql://localhost:5432/employee
+    password: employee
   jpa:
     generate-ddl: 'true'
     show-sql: 'true'

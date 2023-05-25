@@ -1,4 +1,4 @@
-package com.alioguzhancicek.departmentservice.model;
+package com.alioguzhancicek.employeeservice.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,8 +11,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "department")
-public class Department extends BaseModel {
+@Table(name = "employee")
+public class Employee extends BaseModel {
     @Column
     private String name;
     @Column

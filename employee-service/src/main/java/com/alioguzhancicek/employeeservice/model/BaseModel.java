@@ -1,4 +1,4 @@
-package com.alioguzhancicek.departmentservice.model;
+package com.alioguzhancicek.employeeservice.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
